@@ -19,14 +19,15 @@ Application:
     - [./python.exe,                     ./python.exe]
     - [./Remove xlwings from Excel.exe,  ./Remove xlwings from Excel.exe]
     - [./Spyder VA.exe,                  ./Spyder VA.exe]
+    - [./resources,                      ./resources]
 
   startmenu:
-    -'Add xlwings to Excel.exe'
-    -'Create new xlwings project.exe'
-    -'Python VA cmd.exe'
-    -'python.exe'
-    -'Remove xlwings from Excel.exe'
-    -'Spyder VA.exe'
+    - 'Add xlwings to Excel.exe'
+    - 'Create new xlwings project.exe'
+    - 'Python VA cmd.exe'
+    - 'python.exe'
+    - 'Remove xlwings from Excel.exe'
+    - 'Spyder VA.exe'
 
 #Download Python/R (optional) and their dependencies to be deployed
 Dependencies:
