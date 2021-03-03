@@ -6,4 +6,4 @@ call "%~dp0\..\python" -m pip uninstall -y aa_py_core
 
 :: Fix broken xlwings
 del /f "%~dp0\..\bin\python\scripts\xlwings.exe"
-xcopy /s "%~dp0\xlwings.cmd" "%~dp0\..\bin\python\scripts\xlwings.cmd"
+copy "%~dp0xlwings.cmd" "%~dp0\..\bin\python\scripts\xlwings.cmd"

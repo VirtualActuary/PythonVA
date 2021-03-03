@@ -38,7 +38,7 @@ Application:
 
 #Download Python/R (optional) and their dependencies to be deployed
 Dependencies:
-  deploy-scripts: b7360f17570e67fd7ec0aca772a57ce6e53b1523
+  deploy-scripts: 0c12a3b4ced6b8ce504512b2e8468a9d4c7c9bdf
   python:
     - numpy==1.19.3
     - locate==0.0.1
