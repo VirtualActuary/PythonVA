@@ -3,7 +3,7 @@ Application:
 
   name: Python-VA
   asciibanner: tools/deploy-scripts/assets/asciibanner-VA.txt
-  icon: tools/deploy-scripts/assets/VA.ico
+  icon: tools/deploy-scripts/assets/virtualactuary.ico
   installdir: '%userprofile%\Python-VA'
 
   #After installation
