@@ -12,9 +12,21 @@ Application:
   # map "from/path/" -> "to/path"
   programdata:
     - [ ./bin, ./bin]
+    - [ ./src, ./src]
+    - [./Add xlwings to Excel.exe,       ./Add xlwings to Excel.exe]
+    - [./Create new xlwings project.exe, ./Create new xlwings project.exe]
+    - [./Python VA cmd.exe,              ./Python VA cmd.exe]
+    - [./python.exe,                     ./python.exe]
+    - [./Remove xlwings from Excel.exe,  ./Remove xlwings from Excel.exe]
+    - [./Spyder VA.exe,                  ./Spyder VA.exe]
 
-#  startmenu:
-#    - 'src\New Sanlam Grouping Template.exe'
+  startmenu:
+    -'Add xlwings to Excel.exe'
+    -'Create new xlwings project.exe'
+    -'Python VA cmd.exe'
+    -'python.exe'
+    -'Remove xlwings from Excel.exe'
+    -'Spyder VA.exe'
 
 #Download Python/R (optional) and their dependencies to be deployed
 Dependencies:
