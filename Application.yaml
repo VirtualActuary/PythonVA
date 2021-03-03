@@ -13,7 +13,11 @@ Application:
   programdata:
     - [ ./bin, ./bin]
     - [ ./src, ./src]
+
+    # These are neccessary for the uninstallation script
     - [ ./tools/deploy-scripts/tools/remove-and-kill-directory.py, ./tools/deploy-scripts/tools/remove-and-kill-directory.py]
+    - [ ./tools/deploy-scripts/includes/rm_and_kill.py, ./tools/deploy-scripts/includes/rm_and_kill.py]
+
     - [./Add xlwings to Excel.exe,       ./Add xlwings to Excel.exe]
     - [./Create new xlwings project.exe, ./Create new xlwings project.exe]
     - [./Python VA cmd.exe,              ./Python VA cmd.exe]
