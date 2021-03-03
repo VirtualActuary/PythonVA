@@ -2,6 +2,7 @@
 Application:
 
   name: Python VA
+  menuname: Python VA
   asciibanner: tools/deploy-scripts/assets/asciibanner-VA.txt
   icon: icons/virtualactuary.ico
   installdir: '%localappdata%\PythonVA'
