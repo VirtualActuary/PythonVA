@@ -1,10 +1,10 @@
 #information for application name and launcher
 Application:
 
-  name: Python-VA
+  name: Python VA
   asciibanner: tools/deploy-scripts/assets/asciibanner-VA.txt
   icon: icons/virtualactuary.ico
-  installdir: '%userprofile%\Python-VA'
+  installdir: '%localappdata%\PythonVA'
 
   #After installation
   pause: 1
@@ -13,6 +13,7 @@ Application:
   programdata:
     - [ ./bin, ./bin]
     - [ ./src, ./src]
+    - [ ./scripts, ./scripts]
 
     # These are neccessary for the uninstallation script
     - [ ./tools/deploy-scripts/tools/remove-and-kill-directory.py, ./tools/deploy-scripts/tools/remove-and-kill-directory.py]
@@ -33,6 +34,7 @@ Application:
     - 'python.exe'
     - 'Remove xlwings from Excel.exe'
     - 'Spyder VA.exe'
+
 
 #Download Python/R (optional) and their dependencies to be deployed
 Dependencies:
