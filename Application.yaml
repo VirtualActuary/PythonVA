@@ -13,6 +13,7 @@ Application:
   programdata:
     - [ ./bin, ./bin]
     - [ ./src, ./src]
+    - [ ./tools/deploy-scripts/tools/remove-and-kill-directory.py, ./tools/deploy-scripts/tools/remove-and-kill-directory.py]
     - [./Add xlwings to Excel.exe,       ./Add xlwings to Excel.exe]
     - [./Create new xlwings project.exe, ./Create new xlwings project.exe]
     - [./Python VA cmd.exe,              ./Python VA cmd.exe]
@@ -31,7 +32,7 @@ Application:
 
 #Download Python/R (optional) and their dependencies to be deployed
 Dependencies:
-  deploy-scripts: 564bdb6
+  deploy-scripts: 3dd89429d0d694a1a3e8ac1504cd40783ce142f4
   python:
     - numpy==1.19.3
     - locate==0.0.1
