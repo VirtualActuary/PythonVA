@@ -26,6 +26,7 @@ Application:
     - [./python.exe,                     ./python.exe]
     - [./Remove xlwings from Excel.exe,  ./Remove xlwings from Excel.exe]
     - [./Spyder VA.exe,                  ./Spyder VA.exe]
+    - [./pip.exe,                        ./pip.exe]
     - [./resources,                      ./resources]
 
   startmenu:
