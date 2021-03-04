@@ -1,11 +1,17 @@
 @echo off
 set functions="%~dp0functions.bat"
 
-
 :: Set convenient variables
 call %functions% FULL-PATH pythonva_home "%~dp0.."
 call %functions% FULL-PATH python_home "%~dp0..\bin\python"
 call %functions% FULL-PATH python_scripts "%~dp0..\bin\python\scripts"
+
+
+:: Do a pip overwrite in case pip replaced itself
+call "%python_scripts%\pip" pythonva-test-for-custom-pip > nul 2>&1 
+if "%errorlevel%" neq "0" (
+    call "%python_home%\python.exe" "%~dp0fix-pip-python-binaries.py" "%python_scripts%"
+)
 
 
 :: Return early if Windows Path environment is already set

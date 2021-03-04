@@ -4,6 +4,7 @@
 :: Make sure internal library isn't included in the build
 call "%~dp0\..\python" -m pip uninstall -y aa_py_core
 
-:: Fix broken xlwings
-del /f "%~dp0\..\bin\python\scripts\xlwings.exe"
-copy "%~dp0xlwings.cmd" "%~dp0\..\bin\python\scripts\xlwings.cmd"
+:: Fix unmovable pip binaries
+:: call "%~dp0\..\python" "%~dp0..\src\fix-pip-python-binaries.py" "%~dp0\..\bin\python\Scripts"
+
+
