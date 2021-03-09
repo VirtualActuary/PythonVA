@@ -1,11 +1,11 @@
-import locate
-import tempfile
-from pathlib import Path
-import subprocess
 import shutil
+import subprocess
+import tempfile
 from contextlib import contextmanager
 from pathlib import Path
 from typing import Union
+
+import locate
 import xlwings as xw
 
 
@@ -77,11 +77,9 @@ def excel(
             app.kill()
 
 
-
 szipbin = locate.this_dir().parent.joinpath("bin", "7z.exe")
 fiboutput = Path(tempfile.mktemp())
 fibzip = locate.this_dir().parent.joinpath("resources", "fibonacci.zip")
-
 
 subprocess.check_output(
     [str(szipbin), 'x', str(fibzip), '-pabc123', f'-o{fiboutput}', '-aoa', '-y']
@@ -92,6 +90,6 @@ excel(
     save=True,
     quiet=True,
     kill=True
-    )
+)
 
 shutil.rmtree(fiboutput, ignore_errors=True)
