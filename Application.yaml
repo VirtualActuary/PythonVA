@@ -1,4 +1,4 @@
-#information for application name and launcher
+# Information for application name and launcher.
 Application:
 
   name: Python VA
@@ -16,7 +16,7 @@ Application:
     - [ ./src, ./src]
     - [ ./scripts, ./scripts]
 
-    # These are neccessary for the uninstallation script
+    # These are necessary for the uninstallation script
     - [ ./tools/deploy-scripts/tools/remove-and-kill-directory.py, ./tools/deploy-scripts/tools/remove-and-kill-directory.py]
     - [ ./tools/deploy-scripts/includes/rm_and_kill.py, ./tools/deploy-scripts/includes/rm_and_kill.py]
 
@@ -37,8 +37,7 @@ Application:
     - 'Remove xlwings from Excel.exe'
     - 'Spyder VA.exe'
 
-
-#Download Python/R (optional) and their dependencies to be deployed
+# Download Python/R (optional) and their dependencies to be deployed.
 Dependencies:
   deploy-scripts: 7a7024ddde689539865fb144940b6525c6d57626
   python:
