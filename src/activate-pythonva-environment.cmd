@@ -1,5 +1,5 @@
 @echo off
-set functions="%~dp0functions.bat"
+set functions="%~dp0functions.cmd"
 
 :: Set convenient variables
 call %functions% FULL-PATH pythonva_home "%~dp0.."

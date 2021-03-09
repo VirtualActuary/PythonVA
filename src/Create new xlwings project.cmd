@@ -1,5 +1,5 @@
 @echo off
-call "%~dp0\activate-pythonva-environment.bat"
+call "%~dp0\activate-pythonva-environment.cmd"
 
 set /p pname=Enter a name for your project: 
 

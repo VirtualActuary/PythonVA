@@ -5,7 +5,7 @@ def _():''' 2>nul
     ::*******************************************************
     setlocal
     set "PATH=%~dp0..\bin\python;%userprofile%\Applications\image_magic;%PATH%"
-    python "%~dp0%~n0.bat"
+    python "%~dp0%~n0.cmd"
     exit /b %errorlevel%
 '''
 
