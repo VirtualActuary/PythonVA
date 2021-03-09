@@ -1,6 +1,6 @@
 @echo off
 :: *************************************************************************************
-:: This file download deploy-scripts as a submodule
+:: This file downloads deploy-scripts as a submodule.
 :: After this it acts as a thin wrapper for tools\deploy-scripts\tools\application-full.bat
 ::
 :: This file is most likely copy-pasted from: deploy-scripts\copy-pasties\application.bat
@@ -17,11 +17,11 @@ if not exist "%~dp0\tools\deploy-scripts\tools\application-full.bat" (
   echo:
 )
 
-:: Update explicitely called
+:: Update explicitly called
 if /I "%~1" equ "-u" call :UPDATE & goto __recoverstart__
 if /I "%~1" equ "--update" call :UPDATE  & goto __recoverstart__
 
-:: This label can be recovered even after this script gets inplaced-mutated
+:: This label can be recovered even after this script gets mutated in-place.
 :__recoverstart__
 call "%~dp0\tools\deploy-scripts\tools\application-full.bat" %*
 
@@ -29,7 +29,7 @@ call "%~dp0\tools\deploy-scripts\tools\application-full.bat" %*
 goto :EOF
 
 :: *********************************************************************
-:: UPDATE: Ensure we have the newest version of deploy-scripts
+:: UPDATE: Ensure we have the newest version of deploy-scripts.
 :: Cannot use anything from the repo, since it's not downloaded yet!
 :: *********************************************************************
 :UPDATE
