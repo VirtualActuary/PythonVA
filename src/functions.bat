@@ -1,10 +1,9 @@
 @echo off
-:: ************************************************
-:: A file full of reusable bat routines to be called
-:: from an external file.
+:: ************************************************************************
+:: A file full of reusable bat routines to be called from an external file.
 ::
 :: Usage: functions <functionname> <arg1> <arg2> ...
-:: ************************************************
+:: ************************************************************************
 
 :: Redirect to the functions
 call :%*
@@ -264,5 +263,5 @@ goto :EOF
 :: ***********************************************
 :EOF-DEAD
     exit /b 1
-    
+
 GOTO :EOF

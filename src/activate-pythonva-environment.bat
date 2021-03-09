@@ -8,7 +8,7 @@ call %functions% FULL-PATH python_scripts "%~dp0..\bin\python\scripts"
 
 
 :: Do a pip overwrite in case pip replaced itself
-call "%python_scripts%\pip" pythonva-test-for-custom-pip > nul 2>&1 
+call "%python_scripts%\pip" pythonva-test-for-custom-pip > nul 2>&1
 if "%errorlevel%" neq "0" (
     call "%python_home%\python.exe" "%~dp0fix-pip-python-binaries.py" "%python_scripts%"
 )

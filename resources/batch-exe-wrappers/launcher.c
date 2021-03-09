@@ -8,11 +8,11 @@
 #ifdef NOSHELL
     int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 #else
-    int main( int argc, char ** argv ) 
+    int main( int argc, char ** argv )
 #endif
 {
     // *******************************************
-    //Get a direct path to the current running exe
+    // Get a direct path to the current running exe
     // *******************************************
     int size = 125;
     TCHAR* cmdPath = (TCHAR*)malloc(1);
@@ -43,7 +43,7 @@
     for(int i=0; i<_tcslen(cmdArgs)+1; i++){
       //must be easier way to index unicode string
       TCHAR c = *(TCHAR *)(&cmdArgs[i*2]);
-      
+
       if(c == L'"'){inQuote = !inQuote;}
       if(c == L' ' && !inQuote){ isArgs = true;}
 
@@ -82,7 +82,7 @@
       _tcscpy(cmdBaseDir, L".");
     }else{
       cmdBaseDir[2*slashLoc] = '\0';
-      cmdBaseDir[2*slashLoc+1] = '\0';  
+      cmdBaseDir[2*slashLoc+1] = '\0';
     }
 
 
@@ -98,7 +98,7 @@
 
     cmdName = &cmdPath[slashLoc==0?0:slashLoc*2+2];
     int fnameend = _tcslen(cmdName);
-    
+
     // if we run as path\program.exe then we need to truncate the .exe part
     if(0 < fnameend-4 && cmdName[(fnameend-4)*2] == '.'){
         cmdName[(fnameend-4)*2]   = '\0';
@@ -151,7 +151,7 @@
             else if(j==2){_tcscat(batFile, batFile9);}
             else if(j==3){_tcscat(batFile, batFile10);}
             else if(j==4){_tcscat(batFile, batFile11);}
-        
+
             //test if c:\path\to\cmdName.ext exists
             if(0 == _waccess(batFile, 0)){
                 if(j==3){
@@ -214,7 +214,7 @@
     TCHAR* cmdLine2  = L"cmd.exe /c \"";
     TCHAR* cmdLine3  = L"\"";
     TCHAR* cmdLine4  = batFile;
-    TCHAR* cmdLine5  = L"\" "; 
+    TCHAR* cmdLine5  = L"\" ";
     TCHAR* cmdLine6  = cmdArgs;
     TCHAR* cmdLine7 = L"\"";
 
@@ -245,7 +245,7 @@
     }else{
         _tcscat(cmdLine, cmdLine7);
     }
-    
+
     //_tprintf(cmdLine);
     //_tprintf(L"\n");
 
@@ -254,7 +254,7 @@
     // ************************************
     PROCESS_INFORMATION pi;
     STARTUPINFO si;
-        
+
     memset(&si, 0, sizeof(si));
     si.cb = sizeof(si);
 
@@ -276,4 +276,3 @@
 
     return exitCode; //Correct exitcode
 }
-

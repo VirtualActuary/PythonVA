@@ -6,5 +6,3 @@ call "%~dp0\..\python" -m pip uninstall -y aa_py_core
 
 :: Fix unmovable pip binaries
 :: call "%~dp0\..\python" "%~dp0..\src\fix-pip-python-binaries.py" "%~dp0\..\bin\python\Scripts"
-
-
