@@ -40,14 +40,15 @@ Application:
 
 #Download Python/R (optional) and their dependencies to be deployed
 Dependencies:
-  deploy-scripts: 15f91fe
+  deploy-scripts: 1bc10d99170df0331d0ae2cc992fa0d8be0527b6
   python:
+    - git+ssh://git@github.com/AutoActuary/aa-py-core.git@8581ac7#egg=aa-py-core
     - numpy==1.19.3
-    - locate==0.0.1
     - openpyxl~=3.0
     - pandas~=1.1
+    - matplotlib~=3.3
+    - xlwings~=0.23
+    - spyder
     - scipy
     - ipython
-    - jupyter
-    - xlwings
-    - spyder
+    - locate

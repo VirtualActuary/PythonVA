@@ -2,3 +2,13 @@ bin/
 *.svg.ico
 tools/
 .idea/
+
+develop-eggs
+dist
+eggs
+parts
+src/*.egg-info
+lib
+lib64
+__pycache__/
+*.py[cod]
