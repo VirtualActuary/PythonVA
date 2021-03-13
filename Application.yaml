@@ -40,11 +40,14 @@ Application:
 
 #Download Python/R (optional) and their dependencies to be deployed
 Dependencies:
-  deploy-scripts: 0c12a3b4ced6b8ce504512b2e8468a9d4c7c9bdf
+  deploy-scripts: 15f91fe
   python:
     - numpy==1.19.3
     - locate==0.0.1
     - openpyxl~=3.0
     - pandas~=1.1
+    - scipy
+    - ipython
+    - jupyter
     - xlwings
     - spyder
