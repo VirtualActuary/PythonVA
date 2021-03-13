@@ -11,6 +11,7 @@
     int main( int argc, char ** argv ) 
 #endif
 {
+
     // *******************************************
     //Get a direct path to the current running exe
     // *******************************************
@@ -31,6 +32,7 @@
     // Get commandline string as a whole
     // *******************************************
     TCHAR* cmdArgs = GetCommandLineW();
+
 
     // *******************************************
     // Remove argument 0 from the commandline string
@@ -65,7 +67,6 @@
     cmdBaseDir[1] = '\0';
 
     _tcscpy(cmdBaseDir, cmdPath);
-
 
     int nrOfSlashed = 0;
     int slashLoc = 0;
@@ -167,8 +168,8 @@
     // ******************************************
     TCHAR* pythonPath;
 
-    // add 500 for safety (windows paths cap at 260)
-    pythonPath = (TCHAR*) malloc((500+1)*2);
+    // cmdBaseDir + extra room
+    pythonPath = (TCHAR*) malloc((_tcslen(cmdBaseDir)+_tcslen(L"\\pythonw.exe")+1)*2);
     pythonPath[0] = '\0';
     pythonPath[1] = '\0';
 
