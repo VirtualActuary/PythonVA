@@ -40,7 +40,7 @@ Application:
 
 #Download Python/R (optional) and their dependencies to be deployed
 Dependencies:
-  deploy-scripts: d5759c7a7e28676a90a7ec9b9b785217ac7a05f2
+  deploy-scripts: 21744bdd14781312e3a8f3b4a792b645008e2671
   python:
     - spyder>=4.2
     - numpy==1.19.3
