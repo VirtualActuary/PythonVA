@@ -42,13 +42,13 @@ Application:
 Dependencies:
   deploy-scripts: 1bc10d99170df0331d0ae2cc992fa0d8be0527b6
   python:
-    - git+ssh://git@github.com/AutoActuary/aa-py-core.git@8581ac7#egg=aa-py-core
+    - spyder>=4.2
     - numpy==1.19.3
     - openpyxl~=3.0
     - pandas~=1.1
     - matplotlib~=3.3
     - xlwings~=0.23
-    - spyder
     - scipy
     - ipython
     - locate
+    - git+ssh://git@github.com/AutoActuary/aa-py-core.git@8581ac7#egg=aa-py-core
