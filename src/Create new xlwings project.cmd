@@ -22,6 +22,7 @@ from path import Path as _Path
 import subprocess
 import shutil
 import tempfile
+import locate
 
 def sanitize_name(txt):
     letters = "abcdefghijklmnopqrstuvwxyz"
@@ -54,22 +55,34 @@ if __name__ == "__main__":
 
         os.makedirs(outpath, exist_ok=True)
         break
-
+    
+    # Use xlwings.exe to generate the default template
+    pyfile = outpath.joinpath(txt+".py")
+    xlfile = outpath.joinpath(txt+".xlsm")
+    
     with _Path(outpath):
         subprocess.call(["xlwings", "quickstart", txt])
         shutil.move(f"{txt}/{txt}.py", f"{txt}.py")
         shutil.move(f"{txt}/{txt}.xlsm", f"{txt}.xlsm")
     shutil.rmtree(outpath.joinpath(txt))
-
+    
+    
+    # Replace python official template with my template
+    with locate.this_dir().joinpath("..", "resources", "xlwings_template.py").open("r") as f:
+        pytext = f.read()
+        pytext = pytext.replace("__bookname__", txt)
+    
+    with pyfile.open("w") as f:
+        f.write(pytext)
 
     # Write out to temp files readible by batch
     tmp = Path(tempfile.mktemp()).parent
 
     with open(tmp.joinpath("xlwings_pyfile.txt"), "w") as f:
-        f.write(str(outpath.joinpath(txt+".py")))
+        f.write(str(pyfile))
 
     with open(tmp.joinpath("xlwings_xlfile.txt"), "w") as f:
-        f.write(str(outpath.joinpath(txt+".xlsm")))
+        f.write(str(xlfile))
 
 
     
