@@ -9,7 +9,12 @@ def _():''' 2>nul
     ::*******************************************************
     :: This is a .cmd header to define how to run this file
     ::*******************************************************
-    call "%localappdata%\PythonVA\bin\python\python" "%~dp0%~n0.cmd"
+    if not exist "%localappdata%\PythonVA\bin\python\python.exe" (
+        powershell -command "[reflection.assembly]::LoadWithPartialName('System.Windows.Forms')|out-null;[windows.forms.messagebox]::Show(\"Please install PythonVA in order to run this script:`r`n  https://github.com/AutoActuary/PythonVA/releases\", 'PythonVA not installed!')"
+        exit /b -1
+    )
+
+    call "%localappdata%\PythonVA\bin\python\python.exe" "%~dp0%~n0.cmd"
     __pause__
     exit /b %errorlevel%
 '''

@@ -76,7 +76,7 @@ if __name__ == "__main__":
         f.write(pytext)
 
     # Write out to temp files readible by batch
-    tmp = Path(tempfile.mktemp()).parent
+    tmp = Path(os.environ['TEMP'])
 
     with open(tmp.joinpath("xlwings_pyfile.txt"), "w") as f:
         f.write(str(pyfile))
